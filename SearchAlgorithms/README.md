@@ -1,3 +1,5 @@
+ExponentialSearch
+
 Class:	Search algorithm
 
 Data structure:	Array
