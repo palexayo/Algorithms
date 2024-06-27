@@ -36,3 +36,7 @@
 - **Average performance**: O(log n)
 - **Worst-case space complexity**: O(1)
 - **Optimal**: Yes
+
+## Binary Search Demo
+
+![Binary Search Demo](https://upload.wikimedia.org/wikipedia/commons/8/83/Binary-search-work.gif)
