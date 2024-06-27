@@ -39,4 +39,4 @@
 
 ## Binary Search Demo
 
-![Binary Search Demo](https://upload.wikimedia.org/wikipedia/commons/8/83/Binary-search-work.gif)
+By Mazen Embaby - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=124018514
