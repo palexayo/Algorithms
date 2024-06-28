@@ -82,3 +82,46 @@ class LinearProbingHashTable:
 - **Handling Full Table**: When the hash table becomes full (all slots are occupied), resizing the table and rehashing existing keys is necessary for maintaining performance and avoiding collisions.
 - **Performance Impact**: Clustering and longer probe sequences can degrade performance, especially under high load factors or uneven distribution of hash values.
 - **Deletion Management**: Managing deletions, especially during resizing or rehashing operations, requires careful handling to maintain the correct state of the hash table.
+
+
+# Quadratic Probing in Hash Tables
+
+Quadratic probing is a collision resolution technique used in hash tables to address the issue of multiple keys hashing to the same index. This README provides an overview of quadratic probing, its advantages, disadvantages, and the rationale behind its use.
+
+## Overview
+
+A hash table is a data structure that maps keys to values using a hash function to compute an index into an array of buckets or slots. Collisions occur when multiple keys hash to the same index. Quadratic probing is one approach to resolving collisions in open addressing schemes.
+
+### How Quadratic Probing Works
+
+1. **Hash Function**: Compute the initial index using a hash function.
+   
+2. **Collision Handling**: If the computed slot is already occupied:
+   - Use a quadratic sequence (\( j^2 \)) to probe subsequent slots until an empty slot is found.
+   - Insert the key-value pair into the empty slot.
+
+3. **Searching and Deleting**: When searching or deleting:
+   - Use the same quadratic sequence to find the key or mark the slot as deleted (without physically removing it).
+
+## Advantages
+
+- **Simplicity**: Quadratic probing is relatively simple to implement compared to chaining.
+- **Space Efficiency**: It does not require additional memory for pointers or linked lists.
+- **Performance**: Effective under certain conditions (e.g., low load factors) due to reduced clustering compared to linear probing.
+
+## Disadvantages
+
+- **Clustering**: Can suffer from primary and secondary clustering, impacting performance under high load factors.
+- **Probing Sequence Dependence**: Effectiveness relies on the choice of quadratic sequence, which can affect clustering behavior.
+- **Performance Degradation**: Efficiency can degrade as the hash table becomes more full, increasing average search times.
+
+## Rationale Behind Using Quadratic Probing
+
+- **Avoiding Primary Clustering**: Reduces consecutive collisions at the same initial position compared to linear probing.
+- **Memory Efficiency**: Compact representation without additional storage overhead.
+- **Suitability for Open Addressing**: Well-suited for scenarios where every slot in the hash table needs to store key-value pairs or deletion markers.
+
+## Conclusion
+
+Quadratic probing offers a balance between simplicity, space efficiency, and performance in certain hash table implementations. Understanding its advantages, disadvantages, and the conditions under which it performs well is crucial for choosing an appropriate collision resolution strategy based on specific application requirements.
+
