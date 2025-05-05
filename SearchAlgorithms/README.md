@@ -36,7 +36,3 @@
 - **Average performance**: O(log n)
 - **Worst-case space complexity**: O(1)
 - **Optimal**: Yes
-
-## Binary Search Demo
-
-By Mazen Embaby - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=124018514
