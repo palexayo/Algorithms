@@ -42,7 +42,7 @@ class Hashtable:
         while current is not None:
             if current.key == key:
                 if previous:
-                    previous.nex = current.next
+                    previous.next = current.next
                 else:
                     self.table[index] = current.next
                     return True
@@ -50,7 +50,6 @@ class Hashtable:
             current = current.next
 
         return False
-
 
 # Beispiel zur Verwendung der Hash-Tabelle
 hash_table = Hashtable(10)
